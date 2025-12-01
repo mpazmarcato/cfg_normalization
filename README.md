@@ -1,1 +1,1 @@
-# glc_normalization
+# cfg_normalization
