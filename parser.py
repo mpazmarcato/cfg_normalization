@@ -1,4 +1,7 @@
 from models import Production, GLC
+from typing import List
+
+Symbol = str
 
 def parse_set(string: str) -> List[Symbol]:
     s = string.strip()
