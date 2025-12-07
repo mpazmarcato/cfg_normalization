@@ -94,3 +94,13 @@ Cada etapa:
 - Garantir terminal no início das regras
 
 - Gramática final
+
+# Testes
+
+Rode os testes no terminal
+
+```bash
+$ python -m unittest discover tests -v
+```
+
+![testes executados](/doc/images/image.png)
