@@ -1,0 +1,90 @@
+==== Gramática Original ====
+Start: S
+Variables: {S, A, B, C}
+Alphabet: {0, 1, 2}
+Productions:
+  S -> A01BC
+  S -> &
+  A -> 01
+  A -> 1B1
+  B -> BBAA
+  B -> C0101
+  B -> B11
+  B -> &
+  C -> C10A
+  C -> BC
+
+==== Após remoção de produções vazias ====
+Start: S
+Variables: {S, A, B, C}
+Alphabet: {0, 1, 2}
+Productions:
+  S -> A01BC
+  A -> 01
+  A -> 1B1
+  B -> BBAA
+  B -> C0101
+  B -> B11
+  C -> C10A
+  C -> BC
+  S -> A01C
+  A -> 11
+  B -> BAA
+  B -> AA
+  B -> 11
+  C -> C
+
+==== Após remoção de produções unitárias ====
+Start: S
+Variables: {S, A, B, C}
+Alphabet: {0, 1, 2}
+Productions:
+  S -> A01BC
+  S -> A01C
+  A -> 01
+  A -> 1B1
+  A -> 11
+  B -> BBAA
+  B -> C0101
+  B -> B11
+  B -> BAA
+  B -> AA
+  B -> 11
+  C -> C10A
+  C -> BC
+
+==== Forma Normal de Chomsky (Final) ====
+Start: S
+Variables: {A, B, C, C_10, C_11, C_12, C_13, C_14, C_15, C_16, C_17, C_3, C_4, C_5, C_6, C_7, C_8, C_9, S, T_1, T_2}
+Alphabet: {0, 1, 2}
+Productions:
+  T_1 -> 0
+  T_2 -> 1
+  S -> AC_3
+  C_3 -> T_1C_4
+  C_4 -> T_2C_5
+  C_5 -> BC
+  S -> AC_6
+  C_6 -> T_1C_7
+  C_7 -> T_2C
+  A -> T_1T_2
+  A -> T_2C_8
+  C_8 -> BT_2
+  A -> T_2T_2
+  B -> BC_9
+  C_9 -> BC_10
+  C_10 -> AA
+  B -> CC_11
+  C_11 -> T_1C_12
+  C_12 -> T_2C_13
+  C_13 -> T_1T_2
+  B -> BC_14
+  C_14 -> T_2T_2
+  B -> BC_15
+  C_15 -> AA
+  B -> AA
+  B -> T_2T_2
+  C -> CC_16
+  C_16 -> T_2C_17
+  C_17 -> T_1A
+  C -> BC

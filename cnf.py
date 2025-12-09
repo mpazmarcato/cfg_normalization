@@ -34,11 +34,13 @@ def convert_to_cnf(src_file: str, log: list):
     glc = remove_unit_productions(glc)
     log_step(log, "Após remoção de produções unitárias", glc)
 
-    glc = remove_useless_symbols(glc)
-    log_step(log, "Após remoção de símbolos inúteis", glc)
+    #glc = remove_useless_symbols(glc)
+    #log_step(log, "Após remoção de símbolos inúteis", glc)
 
     glc = convert_terminals_and_binarize(glc)
     log_step(log, "Forma Normal de Chomsky (Final)", glc)
+
+    return glc
 
 
 def remove_empty_productions(productions):
